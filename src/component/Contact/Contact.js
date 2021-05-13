@@ -3,7 +3,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                
+                <div className = "map"></div>
             </div>
         );
     }
