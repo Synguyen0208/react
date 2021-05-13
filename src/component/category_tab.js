@@ -30,21 +30,16 @@ alert(id);
     
     render() {
         return (
-            <div class="category-tab">
-                <h2 class="title text-center">PRODUCT CATEGORY</h2>
-                <div class="col-sm-12">
-                    <ul class="nav nav-tabs">
-                        {this.state.data.map(element=>{
-                            return (<li>
-                                <a style={{padding:"10px 15px", color:"white"}}  type="button" data-toggle="tab" name="lotion">{element.industry}</a>
-                                </li>
-                            )
-                        })}
+            <div className="category-tab">
+                <h2 className="title text-center">PRODUCT CATEGORY</h2>
+                <div className="col-sm-12">
+                    <ul className="nav nav-tabs">
+                        
 
                         {/* <button onClick={alert("kk")}></button> */}
                     </ul>
                 </div>
-                <div class="tab-content">
+                <div className="tab-content">
 
                 </div>
             </div>

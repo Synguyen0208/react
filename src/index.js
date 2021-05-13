@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Header from './component/Header';
-import Content from './component/content';
-import Footer from './component/footer';
+// import App from './App';
+// import Header from './component/Header';
+// import Content from './component/content';
+// import Footer from './component/footer';
+import Register from './component/register';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    {/* <Header />
     <Content />
-    <Footer />
+    <Footer /> */}
+    <Register/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -10,7 +10,7 @@ import  "./css/responsive.css";
 import  "./css/font-awesome.min.css";
 import Content_left from "./content_left";
 import Content_right from "./content_right";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +22,7 @@ class Content extends Component {
     render() {
         return (
             <div class="container">
-			    <div class="row">
+			    <div className="row">
                     <Content_left/>
                     <Content_right/>
                 </div>
