@@ -4,6 +4,7 @@ import "./css/price-range.css";
 import axios from "axios";
 import Card from "./card";
 import Category_tab from "./category_tab";
+import Search from "./Search";
 class Content_right extends Component {
     
     constructor(props) {
@@ -37,6 +38,7 @@ class Content_right extends Component {
     render() {
         return (
             <div className="col-sm-9 padding-right">
+                <Search/>
                 <div className="features_items">
 						<br/>
 						<h2 className="title text-center">NEW PRODUCT</h2>
