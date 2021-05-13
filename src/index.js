@@ -6,11 +6,12 @@ import Header from './component/Header';
 import Content from './component/content';
 import Footer from './component/footer';
 import reportWebVitals from './reportWebVitals';
+import Product_detail from './component/product-detail';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <Content />
+    <Product_detail/>
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')
