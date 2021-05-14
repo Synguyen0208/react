@@ -1,0 +1,94 @@
+<div>
+    <button style={ { marginTop: "50px" } }type="button" className="btn btn-primary btn-lg" data - toggle="modal" data - target="#myModal"> Add product </button>
+    <div id="myModal" style={ { display: "none" } }className="modal">
+        <div className="modal-content">
+            <button onClick={ this.hideModal }> Đóng </button>
+            <form onSubmit={ this.handleSubmit }id="form" enctype="multipart/form-data">
+                <div className="modal-header">
+                    <h1> Thêm sản phẩm </h1>
+                    helo { this.state.name_product } </div>
+                <div className="modal-body">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <label for=""> Nhập tên sản phẩm </label><br />
+                                <input type="text" name="name_product" onChange={ this.handleInputChange } placeholder="Nhập tên sản phẩm" required /> <br/>
+                                <labelfor=""> Danh mục sản phẩm </label><br />
+
+                                    <select name="categories" id="industry" onChange={ this.handleInputChange }>
+
+    {
+        this.state.category.map(element => {
+            return ( <option value = { element.id } > { element.industry } </option>)
+        })
+    }
+
+    <option value = "Other" > Other 
+    </option> </select><br />
+                                    <div id="in_industry">
+
+                                    </div>
+
+                                    <div className="in_price">
+                                        <div>
+                                            <label for=""> Giá nhập sản phẩm </label><br />
+                                            <input type="number" min="1" name="price_product" onChange={ this.handleInputChange } placeholder="Nhập giá sản phẩm" required />
+                                        </div>
+                                        <div>
+                                            <label for=""> Giá bán </label><br />
+                                            <input type="number" name="discount_price_product" onChange={ this.handleInputChange } placeholder="Nhập giá bán" required />
+                                        </div>
+                                    </div>
+                                    <label for=""> Số lượng sản phẩm </label><br />
+                                    <input type="number" min="0" name="quantity_product" onChange={ this.handleInputChange } placeholder="Nhập số lượng sản phẩm" required /> <br />
+                                    <label for=""> Khối lượng sản phẩm </label><br />
+                                    <input type="number" min="0" name="mass_product" onChange={ this.handleInputChange } id="mass" placeholder="Nhập khối lượng sản phẩm" required /> <br />
+                                    <label for=""> Ngày sản xuất </label> <input type="date" name="ED" id="" onChange={ this.handleInputChange } required /> <br/>
+                                    <label for=""> Hạn sử dụng </label> <input type="date" name="MFG" id="" onChange={ this.handleInputChange } required/> <br/>
+                                    <label for=""> Công ty sản xuất </label><br/>
+                                    <select name="company_name" id="company" onChange={ this.handleInputChange }> {
+        this.state.company.map(element => {
+            return ( <option value = { element.id } > { element.name } </option>
+            )
+        })
+    }
+
+
+    <option value = "Other" > Other </option> </select><br />
+                                    <div className="input_company" id="input_company">
+                                        <label for=''> Nhập tên công ty </label> <br/>
+                                        <input type='text' name='nameCom' onChange={ this.handleInputChange } placeholder='Nhập tên công ty' required />
+                                        <br />
+                                        <label for=''> Nhập địa chỉ công ty </label> <br/>
+                                        <input type='text' name='address' onChange={ this.handleInputChange } placeholder='Nhập địa chỉ công ty' required />
+                                        <br/>
+                                        <label for=''> Giám đốc công ty </label> <br/>
+                                        <input type='text' name='manager' onChange={ this.handleInputChange } placeholder='Nhập giám đốc công ty' required />
+                                        <br/>
+                                        <label for=''> Mã số thuế </label> <br/>
+                                        <input type='text' name='license' onChange={ this.handleInputChange } placeholder='Mã số thuế' required />
+                                        <br/>
+                                        <label for=''> Phone </label> <input type='phone' name='phoneCom' id='' onChange={ this.handleInputChange } placeholder='Số điện thoại' required />
+                                        <br/>
+                                        <label for=''> Email </label> <br />
+                                        <input type='email' name='email' onChange={ this.handleInputChange } placeholder='Email' />
+                                        <br/>
+                                    </div>
+
+                                    <input type="file" name="image" onChange={ this.handleImage } /><br/>
+                                    <span>
+
+    </span><br/>
+                                    <label for=""> Mô tả sản phẩm </label><br/>
+                                    <textarea name="title" onChange={ this.handleInputChange } id="" cols="30" rows="10" required> </textarea><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="modal-footer">
+                    <button type="submit" id="add" value="add" className="btn btnprimary btn-lg" name="add">
+    Thêm Sản Phẩm </button> </div>
+            </form>
+        </div>
+    </div>
+</div>

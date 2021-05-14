@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/styles.css";
 import { useHistory } from "react-router-dom";
-import history from '../history';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -24,10 +24,7 @@ class Layout_right extends Component {
     componentDidMount() {
 
     }
-    cancel(){
-        
-        history.push("/about");
-    }
+    
     
     render() {
         return (
@@ -39,6 +36,7 @@ class Layout_right extends Component {
                         <ol className="breadcrumb mb-4">
                             <li className="breadcrumb-item active">Dashboard</li>
                         </ol>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add product</button>
                         <div className="row">
                             <div className="col-xl-3 col-md-6">
                                 <div className="card bg-primary text-white mb-4">
@@ -96,7 +94,7 @@ class Layout_right extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <button onClick={this.cancel()}>ffffdf</button>
+                            <button >ffffdf</button>
                         </div>
                         <div className="row">
                             <div className="col-xl-6">
