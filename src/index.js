@@ -5,15 +5,25 @@ import App from './App';
 import Header from './component/Header';
 import Content from './component/content';
 import Footer from './component/footer';
+import Evaluate from './component/evalute/Evaluate';
+import AppComment from './component/comment/AppComment';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Header />
-    <Content />
-    <Footer />
-  </React.StrictMode>,
-  document.getElementById('root')
+ReactDOM.render( <
+    React.StrictMode >
+    <
+    Header / >
+    <
+    Content / >
+    <
+    Footer / >
+    <
+    Evaluate / >
+    <
+    AppComment / >
+    <
+    /React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
