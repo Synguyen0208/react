@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from "axios";
-class Function{
-    static callAPI=(urlAPI, data1, method)=>{
+class Function extends Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            data:null
+        }
+    }
+    callAPI=(urlAPI, data1, method)=>{
         var headers = {
             'Content-Type': 'application/json'
         }
@@ -14,21 +20,27 @@ class Function{
             url: urlAPI    // 4 seconds timeout          
            })
            .then(response => {
-               localStorage.setItem("code", response.data);
-               console.log(response.data);
+            //    this.setState({data:response.data});
+            const gg = new Promise((resolve, reject) => {
+                resolve(localStorage.setItem("code", response.data));
+            });
+               gg.then(console.log(response.data))
+               
+            //    console.log(this.state.data);
           })        
           .catch( console.log("sorry"));
           
         
     }
-    static Product=(formData)=>{
-       if(Function.callAPI('http://localhost/react-project/product.php', formData, "POST")!="False")
+    Product=(formData)=>{
+       if(this.callAPI('http://localhost/react-project/product.php', formData, "POST")!="False")
        window.location.reload();
        ;
     }
-    static Register=(formData)=>{
-        Function.callAPI('http://localhost/react-project/account.php', formData, "POST")
+    Register=(formData)=>{
+        this.callAPI('http://localhost/react-project/account.php', formData, "POST")
     }
+
     
 
 }

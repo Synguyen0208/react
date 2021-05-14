@@ -176,11 +176,58 @@ function register(){
         $GLOBALS['conn']->insert($sql);
     }
 }
+function register_admin(){
+    $email=$_POST['email'];
+    // echo $email;
+    $password=$_POST['password'];
+    $status=$_POST["status"];
+    if($status=="send"){
+        $code=rand(100000, 999999);
+        $title = 'Confirm Account';
+        $content = "Đây là mã code xác nhận account admin của bạn $code";
+        $nTo = 'Account admin';
+        $mTo = "$email";
+        $mail = sendMail($title, $content, $nTo, $mTo);
+        if($mail!=1){
+            echo "Lỗi gửi mail!";
+        }
+        echo $code;
+        
+    }
+    else{
+        $sql="account_admin(email, password, status) values('$email', '$password', 'Notaccept')";
+        $GLOBALS['conn']->insert($sql);
+    }
+}
 function login(){
     $c=0;
     $email=$_POST['email'];
     $password=$_POST['password'];
+    // echo $email;
+    // echo $password;
     $sql="*from account";
+    $result=$GLOBALS['conn']->select($sql);
+    while ($row = mysqli_fetch_array($result)) {
+        if($row['email']==$email&&$row['password']==$password){
+            $c=1;
+            if($row['status']=="accept"){
+                echo "1";
+            }
+            
+            else
+            echo "0";
+        }
+    }
+    if($c==0)
+    echo "0";
+}
+function login_admin(){
+    $c=0;
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    // echo $email;
+    // echo $password;
+    $sql="*from account_admin";
     $result=$GLOBALS['conn']->select($sql);
     while ($row = mysqli_fetch_array($result)) {
         if($row['email']==$email&&$row['password']==$password){
