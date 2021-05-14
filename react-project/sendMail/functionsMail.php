@@ -1,5 +1,5 @@
 <?php
-function sendMail($title, $content, $nTo, $mTo,$diachicc=''){
+function sendMail($title, $content, $nTo, $mTo){
     $nFrom = 'Shop.net';
     $mFrom = 'syn282002@gmail.com';  //dia chi email cua ban 
     $mPass = 'Synguyen282001.';       //mat khau email cua ban
@@ -16,7 +16,7 @@ function sendMail($title, $content, $nTo, $mTo,$diachicc=''){
     $mail->Password   = $mPass;               // GMAIL password
     $mail->SetFrom($mFrom, $nFrom);
     //chuyen chuoi thanh mang
-    $ccmail = explode(',', $diachicc);
+    $ccmail = explode(',', '');
     $ccmail = array_filter($ccmail);
     if(!empty($ccmail)){
         foreach ($ccmail as $k => $v) {

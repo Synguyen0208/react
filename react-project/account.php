@@ -3,7 +3,7 @@ include "funtion.php";
 
 if($_SERVER["REQUEST_METHOD"]=="GET"){
     $conn=new connect_database("php_project");
-$sql="pro.id, pro.name,quantity, price, sell_price, title, ED, MFG, image, mass, industry, com.name as company FROM ((product pro INNER JOIN product_industry ind ON pro.industry_id=ind.id) INNER JOIN company com on pro.id_com=com.id)";
+$sql="* from account";
 $result=$conn->select($sql);
 // $count=mysqli_fetch_assoc($result);
 $arr=array();
@@ -14,14 +14,10 @@ echo json_encode($arr);
 }
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     if($_POST['method']=="POST")
-    add_product();
+    register();
     if($_POST['method']=="PUT")
-    update_product();
+    update_company();
     if($_POST['method']=="delete")
-    delete_product();
+    delete_company();
 }
-if($_SERVER["REQUEST_METHOD"]=="PUT"){
-    
-}
-
 ?>
