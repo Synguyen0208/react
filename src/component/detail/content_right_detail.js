@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import "./css/price-range.css";
+import "../css/price-range.css";
 import axios from "axios";
-import Card from "./card";
-import Category_tab from "./category_tab";
+import Category_tab from "../Content/category_tab";
 import Card_detail from './card_detail';
 class Content_right_detail extends Component {
     
@@ -57,7 +56,5 @@ class Content_right_detail extends Component {
           );
     }
 }
-
-
 
 export default Content_right_detail;

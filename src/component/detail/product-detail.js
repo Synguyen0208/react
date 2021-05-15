@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Content_left from "./content_left";
+import Content_left from "../Content/content_left";
 import Content_right_detail from'./content_right_detail';
 class Product_detail extends Component {
     constructor(props) {
