@@ -25,7 +25,7 @@ class Evaluate extends React.Component {
             starCount = { 5 }
             value = { rating }
             onStarClick = { this.onStarClick.bind(this) }
-            /> <
+            />  <
             /div>
         );
     }

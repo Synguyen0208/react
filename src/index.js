@@ -6,7 +6,8 @@ import Header from './component/Header';
 import Content from './component/content';
 import Footer from './component/footer';
 import Evaluate from './component/evalute/Evaluate';
-import AppComment from './component/comment/AppComment';
+//import Contact from './component/contact/Contact';
+//import AppComment from './component/comment/AppComment';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render( <
@@ -19,8 +20,6 @@ ReactDOM.render( <
     Footer / >
     <
     Evaluate / >
-    <
-    AppComment / >
     <
     /React.StrictMode>,
     document.getElementById('root')
