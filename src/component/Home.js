@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from "./header/Header";
 import Content from'./Content/content';
 import Footer from './footer/footer';
+import history from './history';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,7 +14,7 @@ import Login from './account_admin/login';
 class Home extends Component {
     render() {
         return (
-            <Router>
+            <Router history={history}>
             <div>
             <Switch>
                 <Route exact path="/">

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import Function from '../function';
+import { Link } from 'react-router-dom';
+import history from '../history';
 class Login extends Component {
+  a=new Function;
   constructor(props) {
     super(props);
     this.state={
@@ -10,15 +13,26 @@ class Login extends Component {
     }
   }
   hanleChange=(event)=>{
-    var name=event.target.name;
+    var nam=event.target.name;
     var val=event.target.value;
     this.setState({
       [nam]: val
   });
   }
-  submit=()=>{
+  submit=(event)=>{
+    event.preventDefault();
     const form=new FormData();
-    form
+    form.append("email", this.state.email);
+    form.append("password", this.state.password);
+    form.append("status", "login");
+    this.a.callAPI("http://localhost/react-project/account_admin.php", form, "POST");
+    setTimeout(() => {
+      if(JSON.parse(localStorage.getItem("code"))=="1"){
+        localStorage.setItem("account", JSON.stringify(this.state));
+        history.push('/');
+        window.location.reload();                                                                                                                                                                                       
+      }
+    }, 1000);
   }
   render() {
     return (
