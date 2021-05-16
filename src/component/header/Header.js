@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../css/Header.css';
-// import '../css/style.css';
+import "../css/Header.css";
 import Header_top from "./Header-top";
 import Header_bottom from "./Header_bottom";
 class Header extends Component {
     constructor(props) {
         super(props);
+
     }
 
     render() {

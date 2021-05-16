@@ -11,6 +11,13 @@ import  "../css/font-awesome.min.css";
 import Content_left from "./content_left";
 import Content_right from "./content_right";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import Login from '../account_admin/login';
 class Content extends Component {
     constructor(props) {
         super(props);

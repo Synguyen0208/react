@@ -1,11 +1,12 @@
 import React , {Component} from 'react';
-import "../css/register.css";
+import { Link } from 'react-router-dom';
+import "./register.css";
 
 class Login extends Component {
     render() {
         return (
 
-<div id="layoutAuthentication">
+<div style={{backgroundColor:"#2196F3"}} id="layoutAuthentication">
         <div id="layoutAuthentication_content">
           <main>
             <div className="container">
@@ -30,7 +31,7 @@ class Login extends Component {
                           </div>
                         </div>
                         <div className="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                          <a className="small" href="forgot.php">Forgot Password?</a>
+                          <Link className="small" to="/fogot">Forgot Password?</Link>
                           <button className="btn btn-primary" type="submit" name="login">Login</button>
                         </div>
                       </form>
@@ -44,20 +45,7 @@ class Login extends Component {
             </div>
           </main>
         </div>
-        <div id="layoutAuthentication_footer">
-          <footer className="py-4 bg-light mt-auto">
-            <div className="container-fluid">
-              <div className="d-flex align-items-center justify-content-between small">
-                <div className="text-muted">Copyright © Your Website 2020</div>
-                <div>
-                  <a href="#">Privacy Policy</a>
-                  ·
-                  <a href="#">Terms &amp; Conditions</a>
-                </div>
-              </div>
-            </div>
-          </footer>
-        </div>
+
       </div>
     );
 }
