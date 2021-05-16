@@ -1,12 +1,27 @@
-import React , {Component} from 'react';
-import { Link } from 'react-router-dom';
-import "./register.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Login extends Component {
-    render() {
-        return (
-
-<div style={{backgroundColor:"#2196F3"}} id="layoutAuthentication">
+  constructor(props) {
+    super(props);
+    this.state={
+      email:null,
+      password:null
+    }
+  }
+  hanleChange=(event)=>{
+    var name=event.target.name;
+    var val=event.target.value;
+    this.setState({
+      [nam]: val
+  });
+  }
+  submit=()=>{
+    
+  }
+  render() {
+    return (
+      <div style={{backgroundColor:"#2196F3"}} id="layoutAuthentication">
         <div id="layoutAuthentication_content">
           <main>
             <div className="container">
@@ -15,14 +30,14 @@ class Login extends Component {
                   <div className="card shadow-lg border-0 rounded-lg mt-5">
                     <div className="card-header"><h3 className="text-center font-weight-light my-4">Login</h3></div>
                     <div className="card-body">
-                      <form method="post" acction>
+                      <form onSubmit={this.submit}>
                         <div className="form-group">
                           <label className="small mb-1" htmlFor="inputEmailAddress">Email</label>
-                          <input className="form-control py-4" id="inputEmailAddress" name="email" type="email" placeholder="Enter email address" />
+                          <input className="form-control py-4" onChange={this.hanleChange} id="inputEmailAddress" name="email" type="email" placeholder="Enter email address" />
                         </div>
                         <div className="form-group">
                           <label className="small mb-1" htmlFor="inputPassword">Password</label>
-                          <input className="form-control py-4" id="inputPassword" name="password" type="password" placeholder="Enter password" />
+                          <input className="form-control py-4" id="inputPassword" onChange={this.hanleChange} name="password" type="password" placeholder="Enter password" />
                         </div>
                         <div className="form-group">
                           <div className="custom-control custom-checkbox">
@@ -48,7 +63,8 @@ class Login extends Component {
 
       </div>
     );
+  }
 }
-}
+
 
 export default Login;
