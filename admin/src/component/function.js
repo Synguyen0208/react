@@ -20,6 +20,7 @@ class Function extends Component{
             url: urlAPI    // 4 seconds timeout          
            })
            .then(response => {
+               
             //    this.setState({data:response.data});
             const gg = new Promise((resolve, reject) => {
                 resolve(localStorage.setItem("code", response.data));
@@ -33,9 +34,8 @@ class Function extends Component{
         
     }
     Product=(formData)=>{
-       if(this.callAPI('http://localhost/react-project/product.php', formData, "POST")!="False")
-       window.location.reload();
-       ;
+       this.callAPI('http://localhost/react-project/product.php', formData, "POST")
+      
     }
     Register=(formData)=>{
         this.callAPI('http://localhost/react-project/account.php', formData, "POST")

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import routes from "../router/routes";
+import Getdata from "./getdata";
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,11 +20,11 @@ class Layout extends Component {
         this.props.history.push('/employees');
     }
     componentWillMount() {
-
+      Getdata.get();
     }
 
     componentDidMount() {
-
+      console.log(Getdata.state);
     }
 
 

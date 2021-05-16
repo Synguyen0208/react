@@ -25,7 +25,7 @@ class Testdata extends Component {
     handleSubmit =(event)=>{
         let a=new Function();
         event.preventDefault();
-            const form = this.createForm();
+        const form = this.createForm();
         a.Register(form);
         
         setTimeout(this.check, 1000);
