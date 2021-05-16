@@ -17,7 +17,8 @@ class Login extends Component {
   });
   }
   submit=()=>{
-    
+    const form=new FormData();
+    form
   }
   render() {
     return (
