@@ -54,13 +54,13 @@ class Card_detail extends Component {
                                 {/* <img src="./images/7.jpg" className="newarrival" alt="" /><b/><b/> */}
 
 
-                                <h2><input type="text" name="name" defaultValue={this.props.title} /></h2>
+                                <h2><input type="text" readOnly="true" name="name" defaultValue={this.props.title} /></h2>
                                 <p>Web ID: 1089772</p>
                                 <img src="images/product-details/rating.png" alt="" />
                                 <span>
                                     <span>${this.props.price}</span>
                                     <label>Quantity:</label>
-                                    <input type="text" defaultValue={this.props.quantity} />
+                                    <input type="text" readOnly="true" defaultValue={this.props.quantity} />
                                     <button type="button" className="btn btn-fefault cart">
                                         <i className="fa fa-shopping-cart" />
                         Add to cart
@@ -93,12 +93,12 @@ class Card_detail extends Component {
                                             <img src="'.$r['image'].'" alt="Products" style={{ height: '150px' }} />
                                             <h2>{this.props.price}<sup>đ</sup></h2>
                                             <h4><b>{this.props.name}</b></h4>
-                                            <a href="#" className="btn btn-default add-to-cart"><i className="fa fa-shopping-cart" />Add to cart</a>
+                                            <a href="#" className="btn btn-default add-to-cart" style={{backgroundColor:"yellow"}}><i className="fa fa-shopping-cart" />Add to cart</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>';
-              { }
+
                         </div>
                         <div className="tab-pane fade" id="companyprofile">
                             <div className="col-sm-3">
@@ -112,7 +112,7 @@ class Card_detail extends Component {
                                     </div>
                                 </div>
                             </div>';
-              { }
+
                         </div>
                         <div className="tab-pane fade active in" id="reviews">
                             <div className="col-sm-12">
@@ -147,7 +147,7 @@ class Card_detail extends Component {
                                                 <img src={this.props.image} alt="Products" style={{ height: '150px' }} />
                                                 <h2>{this.props.price}<sup>đ</sup></h2>
                                                 <h4><b>{this.props.name}</b></h4>
-                                                <a href="#" className="btn btn-default add-to-cart"><i className="fa fa-shopping-cart" />Add to cart</a>
+                                                <a href="#" className="btn btn-default add-to-cart" style={{backgroundColor:"yellow"}}><i className="fa fa-shopping-cart" />Add to cart</a>
                                             </div>
                                         </div>
                                     </div>

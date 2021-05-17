@@ -4,61 +4,77 @@ import "../css/price-range.css";
 import axios from "axios";
 import Category_tab from "../Content/category_tab";
 import Card_detail from './card_detail';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useParams,
+    Link
+  } from "react-router-dom";
 class Content_right_detail extends Component {
+    
     constructor(props) {
         super(props);
         this.state={
+            id:null,
             data:[]
-            // id:"",
-            // title:"",
-            // image:"",
-            // status:"",
-            // name:"",
-            // quantity:"",
-            // price:""
-
-        }
+        };
     }
-
-    componentDidMount() {
+    formDetail = () => {
+        const formDetail = new FormData;
+        formDetail.append('id',this.JSON.parse.id_pro.id);
+        formDetail.append('phone',this.JSON.parse.id_pro.title);
+        formDetail.append('image',this.JSON.parse.id_pro.image);
+        formDetail.append('status',this.JSON.parse.id_pro.status);
+        formDetail.append('name',this.JSON.parse.id_pro.name);
+        formDetail.append('quantity',this.JSON.parse.id_pro.quantity);
+        formDetail.append('price',this.JSON.parse.id_pro.price);
+        
+        return formDetail;
+      }
+      componentDidMount(){
         axios({
             method: 'GET',
             data:{text:"jjjj"},
-            url: 'http://localhost/react-project/product.php/',
+            url: 'http://localhost/react-project/product.php',
             timeout: 4000,    // 4 seconds timeout          
            })
            .then(response => {
              this.setState({data:response.data});
              console.log(response);
           })        
-          .catch(error => console.error('timeout exceeded'));
+        //   .catch(error => console.error('timeout exceeded'));
+        //   console.log(this.props.match.params.id.split("=")[1]);
+        //  this.setState({
+        //     //  data:this.props.match.params.data.split("=")[1]
+        //  }) 
       }
-      item=()=>{
-        let data=[];
-        for (let index = 0; index < this.state.data.length; index++) {
-            data.push(<Card_detail 
-                title={this.state.data[index].title} 
-                image={this.state.data[index].image}
-                status={this.state.data[index].status} 
-                name={this.state.data[index].name} 
-                quantity={this.state.data[index].quantity}
-                price={this.state.data[index].price} 
-                star="4" review="5"></Card_detail>);
-        }
-        console.log(data);
-        return data;
-    }
     render() {
+        let data=null;
+        this.state.data.map(element=>{
+            if(element.id==this.props.match.params.id.split("=")[1]){
+                data=<Card_detail 
+                // id={this.state.data[index].id}
+                title={element.title} 
+                image={element.image}
+                status={element.status} 
+                name={element.name} 
+                quantity={element.quantity}
+                price={element.price} 
+                star="4" review="5"></Card_detail>
+            }
+        })
+        
         return (
             <div className="col-sm-9 padding-right">
                 <div className="features_items">
 						<br/>
 						<h2 className="title text-center">DETAIL PRODUCT</h2>
                     <div className="row">
-                       {this.item()}
+                       {data}
                     </div>
                 </div>
-                <Category_tab />
+                {/* <Category_tab /> */}
             </div>
           );
     }

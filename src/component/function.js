@@ -41,8 +41,6 @@ class Function extends Component{
         this.callAPI('http://localhost/react-project/account.php', formData, "POST")
     }
 
-    
-
 }
 
 

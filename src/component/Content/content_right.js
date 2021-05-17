@@ -29,7 +29,7 @@ class Content_right extends Component {
       item=()=>{
         let data=[];
         for (let index = 0; index < this.state.data.length; index++) {
-            data.push(<Card image={this.state.data[index].image} name={this.state.data[index].name} price={this.state.data[index].price} star="4" review="5"></Card>);
+            data.push(<Card id={this.state.data[index].id} image={this.state.data[index].image} name={this.state.data[index].name} price={this.state.data[index].price} star="4" review="5"></Card>);
         }
         console.log(data);
         return data;

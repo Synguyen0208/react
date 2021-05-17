@@ -15,9 +15,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    useParams,
     Link
   } from "react-router-dom";
 import Login from '../account_admin/login';
+import Content_right_detail from '../detail/content_right_detail';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -26,12 +28,20 @@ class Content extends Component {
 
     render() {
         return (
+            <Router>
             <div class="container">
 			    <div class="row">
                     <Content_left/>
-                    <Content_right/>
+                    <Switch>
+                <Route exact path="/">
+                <Content_right/>
+                </Route>
+                <Route path="/product/:id" component={Content_right_detail} />
+            </Switch>
+                    
                 </div>
             </div>
+            </Router>
             
         );
     }
