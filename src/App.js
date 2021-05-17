@@ -39,10 +39,6 @@ import  "./component/css/responsive.css";
 import  "./component/css/font-awesome.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Home from './component/Home';
-
-import Content from './component/Content/content';
-import Login from  './component/account_admin/login';
-import Product_detail from './component/detail/product-detail';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -54,8 +50,7 @@ class App extends Component {
             <div class="container">
 			    <div class="row">
                 <Home/>
-                {/* <Product_detail/> */}
-                {/* <Login/> */}
+               
                 </div>
             </div>
             

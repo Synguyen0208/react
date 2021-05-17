@@ -5,11 +5,18 @@ import axios from "axios";
 import Category_tab from "../Content/category_tab";
 import Card_detail from './card_detail';
 class Content_right_detail extends Component {
-    
     constructor(props) {
         super(props);
         this.state={
             data:[]
+            // id:"",
+            // title:"",
+            // image:"",
+            // status:"",
+            // name:"",
+            // quantity:"",
+            // price:""
+
         }
     }
 
@@ -17,7 +24,7 @@ class Content_right_detail extends Component {
         axios({
             method: 'GET',
             data:{text:"jjjj"},
-            url: 'http://localhost/react-project/product.php',
+            url: 'http://localhost/react-project/product.php/',
             timeout: 4000,    // 4 seconds timeout          
            })
            .then(response => {

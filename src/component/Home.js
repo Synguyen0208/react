@@ -11,6 +11,11 @@ import {
     Link
   } from "react-router-dom";
 import Login from './account_admin/login';
+import Forgot from './account_admin/forgot';
+import Register from './account_admin/register';
+import Confirm from './account_admin/confirm';
+import Reset from './account_admin/reset';
+import Product_detail from './detail/product-detail';
 class Home extends Component {
     render() {
         return (
@@ -22,11 +27,23 @@ class Home extends Component {
                     <Content/>
                     <Footer/>
                 </Route>
+                <Route path="/product_detail">
+                    <Product_detail/>
+                </Route>
                 <Route path="/login">
                     <Login />
                 </Route>
                 <Route path="/fogot">
-                    <div>fffffff</div>
+                    <Forgot/>
+                </Route>
+                <Route path="/register">
+                    <Register/>
+                </Route>
+                <Route path="/confirm">
+                    <Confirm/>
+                </Route>
+                <Route path="/reset">
+                    <Reset/>
                 </Route>
             </Switch>
             </div>

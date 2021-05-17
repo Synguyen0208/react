@@ -67,7 +67,8 @@ class Login extends Component {
                       </form>
                     </div>
                     <div className="card-footer text-center">
-                      <div className="small"><a href="register.php">Need an account? Sign up!</a></div>
+                    <Link className="small" to="/register">Need an account? Sign up!</Link>
+                     
                     </div>
                   </div>
                 </div>

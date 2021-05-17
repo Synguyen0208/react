@@ -1,10 +1,11 @@
 import React , {Component} from 'react';
 import "./register.css";
-
+import { Link } from 'react-router-dom';
+import history from '../history';
 class Confirm extends Component {
     render() {
         return (
-
+          <div style={{ backgroundColor: "#2196F3" }} id="layoutAuthentication">
             <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
               <main>
@@ -28,7 +29,7 @@ class Confirm extends Component {
                           </form>
                         </div>
                         <div className="card-footer text-center">
-                          <div className="small"><a href="register.php">Go to create account</a></div>
+                          <Link className="small" to ="/register">Go to create account</Link>
                         </div>
                       </div>
                     </div>
@@ -36,6 +37,7 @@ class Confirm extends Component {
                 </div>
               </main>
             </div>
+          </div>
           </div>
         );
 
