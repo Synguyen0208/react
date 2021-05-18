@@ -51,7 +51,7 @@ class Card_detail extends Component {
                                 <i className="fa fa-shopping-cart" />
                                         Add to cart
                                 </button>
-                                <button type="button" style={{backgroundColor:"#ff6600"}} className="btn btn-fefault cart">
+                                <button type="button" style={{backgroundColor:"#326e52"}} className="btn btn-fefault cart">
                                 <i className="fa fa-shopping-cart" />
                                         Mua ngay
                                 </button>

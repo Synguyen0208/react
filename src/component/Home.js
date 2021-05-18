@@ -27,9 +27,6 @@ class Home extends Component {
                     <Content/>
                     <Footer/>
                 </Route>
-                <Route path="/product_detail">
-                    <Product_detail/>
-                </Route>
                 <Route path="/login">
                     <Login />
                 </Route>

@@ -14,15 +14,15 @@ class Product_detail extends Component {
 
     render() {
         return (
-            <div class="container">
-            <div class="row">
+            
+            <div>
                 <Header/>
                 <Content_left/>
                 <Content_right_detail/>
                 <Footer/>
           
             </div>
-        </div>
+       
         );
     }
 }

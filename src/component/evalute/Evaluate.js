@@ -18,7 +18,8 @@ class Evaluate extends React.Component {
         const { rating } = this.state;
 
         return ( < div >
-            <h2 > Rating from state: { rating } </h2> 
+            <h4 style={{color:"rgb(50, 110, 82)"}}> Rate and submit your review of the product </h4> 
+            <hr style={{color:"rgb(50, 110, 82)"}}></hr>
             <StarRatingComponent name = "rate1"
             starCount = { 5 }
             value = { rating }

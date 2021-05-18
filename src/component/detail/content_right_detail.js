@@ -65,7 +65,12 @@ class Content_right_detail extends Component {
           star="4" review="5"></Card_detail>
       }
     })
-
+    let image=[];
+    if(this.props.match.params.id.split("=")[1]=2){
+      for(var i=1;i<6;i++){
+        image.push(<img style={{marginTop:"7px"}} src={"/images/2/"+i+".jpg"}></img>)
+      }
+    }
     return (
       <div className="col-sm-12 padding-right">
         <div className="features_items">
@@ -74,7 +79,11 @@ class Content_right_detail extends Component {
           <div className="row">
             {data}
           </div>
-          <Comment/>
+          {image
+          }
+
+          
+          <Comment id_pro={this.props.match.params.id.split("=")[1]}/>
 
 
         </div>
