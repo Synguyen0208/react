@@ -31,9 +31,10 @@ class Content extends Component {
             <Router>
             <div class="container">
 			    <div class="row">
-                    <Content_left/>
+                    
                     <Switch>
                 <Route exact path="/">
+                <Content_left/>
                 <Content_right/>
                 </Route>
                 <Route path="/product/:id" component={Content_right_detail} />

@@ -66,7 +66,7 @@ class Content_right_detail extends Component {
         })
         
         return (
-            <div className="col-sm-9 padding-right">
+            <div className="col-sm-12 padding-right">
                 <div className="features_items">
 						<br/>
 						<h2 className="title text-center">DETAIL PRODUCT</h2>
