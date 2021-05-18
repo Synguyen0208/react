@@ -26,27 +26,6 @@ class Card_detail extends Component {
                                 <img src={this.props.image} />
                                 <h3>ZOOM</h3>
                             </div>
-                            <div id="similar-product" className="carousel slide" data-ride="carousel">
-                                {/* Wrapper for slides */}
-                                <div className="carousel-inner">
-                                    {/* <div className="item active">
-                      <img src={this.props.image} />		
-                      </div>
-                      <div className="item">
-                      <img src={this.props.image} />
-                      </div>
-                      <div className="item">
-                      <img src={this.props.image} />	
-                      </div> */}
-                                </div>
-                                {/* Controls */}
-                                <a className="left item-control" href="#similar-product" data-slide="prev">
-                                    <i className="fa fa-angle-left" />
-                                </a>
-                                <a className="right item-control" href="#similar-product" data-slide="next">
-                                    <i className="fa fa-angle-right" />
-                                </a>
-                            </div>
                         </div>
                         <div className="col-sm-7">
                             <div className="product-information">{/*/product-information*/}
@@ -54,23 +33,30 @@ class Card_detail extends Component {
                                 {/* <img src="./images/7.jpg" className="newarrival" alt="" /><b/><b/> */}
 
 
-                                <h2><input type="text" readOnly="true" name="name" defaultValue={this.props.title} /></h2>
-                                <p>Web ID: 1089772</p>
+                                <h2>{this.props.title}</h2>
                                 <img src="images/product-details/rating.png" alt="" />
                                 <span>
                                     <span>${this.props.price}</span>
-                                    <label>Quantity:</label>
-                                    <input type="text" readOnly="true" defaultValue={this.props.quantity} />
-                                    <button type="button" className="btn btn-fefault cart">
-                                        <i className="fa fa-shopping-cart" />
-                        Add to cart
-                      </button>
+                                    {/* <label>Quantity:</label> */}
+                                    {/* <input type="text" readOnly="true" defaultValue={this.props.quantity} /> */}
                                 </span>
                                 <p><b>Availability:</b> In Stock</p>
                                 <p><b>Condition:</b>{this.props.status} </p>
                                 <p><b>Brand:</b>{this.props.name} </p>
                                 <a href><img src="images/product-details/share.png" className="share img-responsive" alt="" /></a>
+                                
                             </div>{/*/product-information*/}
+                            <div style={{display:"flex"}}>
+                            <button type="button" style={{backgroundColor:"#ff6600"}} className="btn btn-fefault cart">
+                                <i className="fa fa-shopping-cart" />
+                                        Add to cart
+                                </button>
+                                <button type="button" style={{backgroundColor:"#ff6600"}} className="btn btn-fefault cart">
+                                <i className="fa fa-shopping-cart" />
+                                        Mua ngay
+                                </button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>{/*/product-details*/}
