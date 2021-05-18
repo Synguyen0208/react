@@ -17,16 +17,14 @@ class Evaluate extends React.Component {
     render() {
         const { rating } = this.state;
 
-        return ( <
-            div >
-            <
-            h2 > Rating from state: { rating } < /h2> <
-            StarRatingComponent name = "rate1"
+        return ( < div >
+            <h2 > Rating from state: { rating } </h2> 
+            <StarRatingComponent name = "rate1"
             starCount = { 5 }
             value = { rating }
             onStarClick = { this.onStarClick.bind(this) }
-            />  <
-            /div>
+            />  
+            </div>
         );
     }
 }
