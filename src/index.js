@@ -6,22 +6,20 @@ import Header from './component/Header';
 import Content from './component/content';
 import Footer from './component/footer';
 import Evaluate from './component/evalute/Evaluate';
-//import Contact from './component/contact/Contact';
+import Contact from './component/Contact/Contact';
+import Comment from './component/comment/Comment';
 //import AppComment from './component/comment/AppComment';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render( <
-    React.StrictMode >
-    <
-    Header / >
-    <
-    Content / >
-    <
-    Footer / >
-    <
-    Evaluate / >
-    <
-    /React.StrictMode>,
+ReactDOM.render( 
+    <React.StrictMode >
+    <Header />
+    <Content />
+    <Footer />
+    <Evaluate />
+    <Contact/>
+    <Comment/>
+    </React.StrictMode>,
     document.getElementById('root')
 );
 

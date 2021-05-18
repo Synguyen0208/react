@@ -46,7 +46,7 @@ class Content_right extends Component {
                        {this.item()}
                     </div>
                 </div>
-                <Category_tab />
+                {/* <Category_tab /> */}
             </div>
         );
     }
