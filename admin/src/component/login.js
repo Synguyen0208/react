@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import $ from "jquery";
-import Function from "./function";
+import Function from "./component_small/function";
 import { CommonLoading } from 'react-loadingg';
 // import history from "history";
 class Testdata extends Component {
