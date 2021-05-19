@@ -44,7 +44,7 @@ class componentName extends Component {
         form.append("comment", this.state.comment);
         form.append("eva", this.state.rating);
         form.append("method", "comment");
-        this.call.callAPI("http://localhost/react-project/product.php", form, "POST");
+        this.call.callAPI("http://localhost/react-project/review.php", form, "POST");
         setTimeout(window.location.reload(), 200);
     }
     render() {

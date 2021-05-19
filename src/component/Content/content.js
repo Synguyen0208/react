@@ -10,7 +10,8 @@ import  "../css/responsive.css";
 import  "../css/font-awesome.min.css";
 import Content_left from "./content_left";
 import Content_right from "./content_right";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Blog from "../component/blog/blog"
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,6 +21,8 @@ import {
   } from "react-router-dom";
 import Login from '../account_admin/login';
 import Content_right_detail from '../detail/content_right_detail';
+import Card from './card';
+import Cart from '../Card/card';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -38,6 +41,8 @@ class Content extends Component {
                 <Content_right/>
                 </Route>
                 <Route path="/product/:id" component={Content_right_detail} />
+                <Route path="/blog" component={Blog} />
+                
             </Switch>
                     
                 </div>

@@ -43,7 +43,7 @@ class Header_top extends Component {
                   <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/login">Login</Link></li>
                   <li><Link to="/product_detail">Detail</Link></li>
-                  <li><a href="services.html">Service</a></li>
+                  <li><Link to="/cart">Cart</Link></li>
                   {/* <li><a href="contact.html">Contact</a></li> */}
                   <div class="clear"></div>
                 </ul>

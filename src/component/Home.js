@@ -12,10 +12,14 @@ import {
   } from "react-router-dom";
 import Login from './account_admin/login';
 import Forgot from './account_admin/forgot';
-import Register from './account_admin/register';
+import Register from './component/Register/register';
 import Confirm from './account_admin/confirm';
 import Reset from './account_admin/reset';
 import Product_detail from './detail/product-detail';
+import Card from './Content/card';
+import Cart from './Card/card';
+import SignIn from './component/SignUp/SignIn';
+import Blog from "./component/blog/blog"
 class Home extends Component {
     render() {
         return (
@@ -25,10 +29,11 @@ class Home extends Component {
                 <Route exact path="/">
                     <Header/>
                     <Content/>
+                    {/* <Route path="/blog" component={Blog} /> */}
                     <Footer/>
                 </Route>
                 <Route path="/login">
-                    <Login />
+                    <SignIn />
                 </Route>
                 <Route path="/fogot">
                     <Forgot/>
@@ -42,6 +47,7 @@ class Home extends Component {
                 <Route path="/reset">
                     <Reset/>
                 </Route>
+                <Route path="/cart" component={Cart} />
             </Switch>
             </div>
             </Router>

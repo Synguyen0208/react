@@ -37,7 +37,7 @@ import  "./component/css/beauty.css";
 import  "./component/css/price-range.css";
 import  "./component/css/responsive.css";
 import  "./component/css/font-awesome.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Home from './component/Home';
 class App extends Component {
     constructor(props) {

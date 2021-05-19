@@ -19,7 +19,6 @@ class Header_bottom extends Component {
 						<li><img src="./images/2.jpg" alt="" /></li>
 						<li><img src="./images/1.jpg" alt="" /></li>
 						<li><img src="./images/3.jpg" alt="" /></li>
-						
 					</ul>
 				</div>
 			</div>
