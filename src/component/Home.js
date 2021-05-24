@@ -19,7 +19,9 @@ import Product_detail from './detail/product-detail';
 import Card from './Content/card';
 import Cart from './Card/card';
 import SignIn from './component/SignUp/SignIn';
-import Blog from "./component/blog/blog"
+import Blog from "./component/blog/blog";
+import $ from 'jquery';
+import Product from './Content/product';
 class Home extends Component {
     render() {
         return (
@@ -30,6 +32,11 @@ class Home extends Component {
                     <Header/>
                     <Content/>
                     {/* <Route path="/blog" component={Blog} /> */}
+                    <Footer/>
+                </Route>
+                <Route path="/product">
+                
+                    <Product/>
                     <Footer/>
                 </Route>
                 <Route path="/login">
@@ -46,6 +53,11 @@ class Home extends Component {
                 </Route>
                 <Route path="/reset">
                     <Reset/>
+                </Route>
+                <Route path="/blog">
+                <Header/>
+                    <Blog/>
+                    <Footer/>
                 </Route>
                 <Route path="/cart" component={Cart} />
             </Switch>

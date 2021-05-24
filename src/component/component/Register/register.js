@@ -4,6 +4,7 @@ import $ from "jquery";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import history from "../history";
 import Function from "../function";
+import { Link } from 'react-router-dom';
 class Register extends Component {
   a = new Function();
   constructor(props) {
@@ -54,7 +55,7 @@ class Register extends Component {
         alert("Thông tin đăng nhập bị trùng!");
         else
         {
-          history.push('/');
+          history.push('/login');
           window.location.reload();
         }
       },500)
@@ -117,8 +118,9 @@ class Register extends Component {
                 </form>
               </div>
               <div className="signup-image">
+                
                 <figure><img src="images/signup-image.jpg" alt="sing up image" /></figure>
-                <a href="#" className="signup-image-link">I am already member</a>
+                <Link to="/login" className="signup-image-link">I am already member</Link>
               </div>
             </div>
           </div>

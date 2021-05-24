@@ -39,10 +39,10 @@ class Header_top extends Component {
               <div class="menu">
                 <ul>
                   <li><Link to="">Home</Link></li>
-                  <li><Link to="/product">Product</Link></li>
+                  <li><Link to="/product">About Us</Link></li>
                   <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/login">Login</Link></li>
-                  <li><Link to="/product_detail">Detail</Link></li>
+                  <li><Link to="/logout">logout</Link></li>
                   <li><Link to="/cart">Cart</Link></li>
                   {/* <li><a href="contact.html">Contact</a></li> */}
                   <div class="clear"></div>

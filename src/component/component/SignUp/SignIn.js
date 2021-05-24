@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Register.css';
 // import $ from "jquery";
 import Function from "../function";
+import history from "../history";
 import "../css/material-design-iconic-font.min.css";
 import { Link } from 'react-router-dom';
 class SignIn extends Component {
@@ -31,8 +32,9 @@ class SignIn extends Component {
         if(JSON.parse(localStorage.getItem("code")==0))
                 alert("Thông tin đăng nhập không đúng!");
         else{
-            alert("Đăng nhập thành công!");
             localStorage.setItem("user", JSON.stringify(this.state));
+            history.push('/');
+            window.location.reload();
         }
         
     }

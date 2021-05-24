@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./register.css";
 import {Link} from 'react-router-dom';
+// import $ from 'jquery';
 class Register extends Component {
   render() {
     return (

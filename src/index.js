@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Register from './component/account_admin/register';
 import Home from './component/Home';
+import Blog from './component/component/blog/blog';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Register/> */}
     <Home/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

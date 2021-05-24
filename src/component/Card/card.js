@@ -11,10 +11,12 @@ class Cart extends Component {
         }
     }
     componentDidMount(){
+        var email=JSON.parse(localStorage.getItem("user")).email;
+        // alert(email);
         axios({
             method: 'GET',
             data: { text: "jjjj" },
-            url: 'http://localhost/react-project/cart.php?email="thanh@gmail.com"',
+            url: 'http://localhost/react-project/cart.php?email='+email,
             //timeout: 4000, // 4 seconds timeout          
         })
             .then(response => {
